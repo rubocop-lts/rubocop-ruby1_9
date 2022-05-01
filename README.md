@@ -82,8 +82,8 @@ This has the same effect as you declaring the following in your `.rubocop.yml`:
 
 ```yaml
 AllCops:
-  # remove if already present in your `.rubocop.yml` to gain the full benefit of this gem!
-  TargetRubyVersion: 1.9
+  # The sibling gems for newer versions of Ruby support the TargetRubyVersion directive as soon as Rubocop adds it.
+  # TargetRubyVersion: 1.9
   # The sibling gems for newer versions of Ruby support the NewCops directive as soon as Rubocop adds it.
   # NewCops: enable
 ```
@@ -92,7 +92,9 @@ Let's talk about these settings.
 
 ## TargetRubyVersion
 
-Allowing this gem to manage the target ruby version means you can switch to a different gem within the family when you upgrade to the next version of Ruby, and have nothing else to change.  A single line in the `Gemfile`, and you are done.
+If you want to use this you'll have to upgrade to Ruby >= 2.0 and use the appropriate sibling gem, e.g. [`rubocop-ruby2_0`][2-0].
+
+[2-0]: https://github.com/rubocop-semver/rubocop-ruby2_0
 
 ## NewCops: enable
 

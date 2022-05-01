@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-%w[
+%w(
   bundler/gem_tasks
   rake/testtask
   rspec/core/rake_task
-].each { |f| require f }
+).each { |f| require f }
 
 Bundler::GemHelper.install_tasks
 
@@ -21,4 +21,4 @@ rescue LoadError
   end
 end
 
-task default: %i[spec rubocop]
+task default: [:spec, :rubocop]
