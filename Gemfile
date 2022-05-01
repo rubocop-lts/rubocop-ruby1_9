@@ -15,7 +15,7 @@ ruby_version = Gem::Version.new(RUBY_VERSION)
 minimum_version = ->(version, engine = "ruby") { ruby_version >= Gem::Version.new(version) && RUBY_ENGINE == engine }
 linting = minimum_version.call("1.9")
 
-gem "pry", platforms: %i[mri jruby]
+gem "pry", platforms: [:mri, :jruby]
 
 platforms :mri do
   if linting
