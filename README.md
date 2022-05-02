@@ -81,12 +81,14 @@ inherit_gem:
 This has the same effect as you declaring the following in your `.rubocop.yml`:
 
 ```yaml
-AllCops:
+# AllCops:
   # The sibling gems for newer versions of Ruby support the TargetRubyVersion directive as soon as Rubocop adds it.
   # TargetRubyVersion: 1.9
   # The sibling gems for newer versions of Ruby support the NewCops directive as soon as Rubocop adds it.
   # NewCops: enable
 ```
+
+Everything is commented out!  None of these settings exist in the very old version of rubocop that works with Ruby 1.9.
 
 Let's talk about these settings.
 
