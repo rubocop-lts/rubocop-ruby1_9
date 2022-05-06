@@ -87,14 +87,16 @@ This has the same effect as you declaring the following in your `.rubocop.yml`:
   # The sibling gems for newer versions of Ruby support the NewCops directive as soon as Rubocop adds it.
   # NewCops: enable
 
-# Removed as of 0.80.0
-# braces setting is for compatibility with Ruby 2.7+
-# See:
-#  * https://github.com/rubocop/rubocop/issues/7641
-#  * https://github.com/rubocop/rubocop/pull/7643
 Style/BracesAroundHashParameters:
   Enabled: true
   EnforcedStyle: context_dependent
+
+Style/Encoding:
+  Enabled: true
+  EnforcedStyle: always
+
+Style/ExpandPathArguments:
+  Enabled: false
 ```
 
 Let's talk about these settings.
@@ -124,6 +126,17 @@ See:
 * https://github.com/rubocop/rubocop/pull/7643
 
 NOTE: This cop was removed from Rubocop as of 0.80.0, so if you are on modern Rubocop and reading this for some reason, you can't use it.
+
+## Style/Encoding
+
+The encoding comments can be removed once your project drops Ruby 1.9 support (and this gem!).
+Whole file UTF-8 Encoding is default in Ruby 2+, so the Encoding comment is usually not needed there.
+See:
+ * https://www.rubydoc.info/gems/rubocop/0.49.0/RuboCop/Cop/Style/Encoding
+
+# Style/ExpandPathArguments
+
+This is for compatibility with Ruby < 2.  Without turning this cop *off*, Rubocop would "auto-correct" would break your code for Ruby 1.9. 
 
 ## Development
 
