@@ -1,0 +1,18 @@
+inherit_gem:
+  rubocop-ruby1_9: rubocop.yml
+
+###################################################################
+# Rules that allow preservation of ruby 1.8.7 / ree compatibility #
+###################################################################
+
+Style/HashSyntax:
+  EnforcedStyle: hash_rockets
+
+Style/Lambda:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false

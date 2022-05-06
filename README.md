@@ -43,6 +43,22 @@ Adding this gem will facilitate the best practice of adding a `~> ` version cons
 minimizing the risk of a rubocop minor / patch upgrade breaking the build. See the
 official [compatibility matrix](https://github.com/rubocop/rubocop/blob/master/docs/modules/ROOT/pages/compatibility.adoc#support-matrix) (Rubocop documentation)
 
+## Supporting Ruby v1... in 2022?
+
+Many gems, and many of those among the most popular gems in all of Ruby-land (e.g. [rspec](https://rubygems.org/gems/rspec/versions/3.11.0), [os](https://rubygems.org/gems/os)) still do not specify a `required_ruby_version`, or they list it as `>= 0`.
+
+If those gems want to:
+* follow semver, and
+* deprecate old rubies, then
+* they need to first figure out what version of Ruby is currently supported, and
+* once having determined the oldest supported version, they may want to enforce that support via linting, hence this family of gems.
+
+NOTE: Some gems, e.g. rspec, are intentionally supporting Ruby 1.8.7 in 2022!
+
+If you think about the use case of RSpec a bit this makes sense, as it would be ideal for the community for RSpec to be the last gem to drop support for Ruby 1.8.7.  I wrote a [suite](https://railsbling.com/tags/rspec/) of RSpec extension gems, and I try to support the same versions of Ruby as RSpec does with my extensions.
+
+This gem targets, and will run, on Ruby 1.9.  Rubocop used to be able to analyze Ruby 1.8, and this gem makes use of that. If you are still supporting Ruby 1.8, see [What about Ruby 1.8?](https://github.com/rubocop-semver/rubocop-ruby2_0#what-about-ruby-1_8) further down the page, because we can help!
+
 ## Stable
 
 All releases of this gem are stable releases. The first version is `1.0.0`.
