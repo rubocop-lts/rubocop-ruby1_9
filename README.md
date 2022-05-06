@@ -57,7 +57,7 @@ NOTE: Some gems, e.g. rspec, are intentionally supporting Ruby 1.8.7 in 2022!
 
 If you think about the use case of RSpec a bit this makes sense, as it would be ideal for the community for RSpec to be the last gem to drop support for Ruby 1.8.7.  I wrote a [suite](https://railsbling.com/tags/rspec/) of RSpec extension gems, and I try to support the same versions of Ruby as RSpec does with my extensions.
 
-This gem targets, and will run, on Ruby 1.9.  RuboCop used to be able to analyze Ruby 1.8, and this gem makes use of that. If you are still supporting Ruby 1.8, see [What about Ruby 1.8?](https://github.com/rubocop-semver/rubocop-ruby1_9#what-about-ruby-1_8) further down the page, because we can help!
+This gem targets, and will run, on Ruby 1.9.  RuboCop used to be able to analyze Ruby 1.8, and this gem makes use of that. If you are still supporting Ruby 1.8, see [What about Ruby 1.8?](https://github.com/rubocop-semver/rubocop-ruby1_9#what-about-ruby-18) further down the page, because we can help!
 
 ## Stable
 
