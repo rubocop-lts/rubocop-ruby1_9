@@ -16,7 +16,9 @@ Gem::Specification.new do |spec|
   spec.description = "Links dependency on minimum Ruby version to maximum RuboCop version"
   spec.homepage = "https://github.com/rubocop-semver/rubocop-ruby1_9"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 1.9.0"
+  # Installs on Ruby 3.0 and 3.1!
+  # Runs on Ruby 3.0, but not 3.1
+  spec.required_ruby_version = [">= 1.9.0"]
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "#{spec.homepage}/tree/v#{spec.version}"
