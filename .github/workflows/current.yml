@@ -32,14 +32,15 @@ jobs:
       matrix:
         experimental: [false]
         gemfile:
-          - ruby
-          - rails7
+          - vanilla
+#          - rails7
         rubygems:
           - latest
         bundler:
           - none
         ruby:
-          - "3.1"
+          - "2.7"
+          - "3.0"
 
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}

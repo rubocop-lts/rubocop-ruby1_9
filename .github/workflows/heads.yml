@@ -32,8 +32,8 @@ jobs:
       matrix:
         experimental: [false]
         gemfile:
-          - ruby
-          - rails7
+          - vanilla
+#          - rails7
         ruby:
           - jruby-head
           - ruby-head
