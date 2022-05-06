@@ -14,7 +14,3 @@ Style/BracesAroundHashParameters:
 Style/Encoding:
   Enabled: true
   EnforcedStyle: always
-
-# Compatibility with Ruby < 2
-Style/ExpandPathArguments:
-  Enabled: false

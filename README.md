@@ -150,10 +150,6 @@ Whole file UTF-8 Encoding is default in Ruby 2+, so the Encoding comment is usua
 See:
  * https://www.rubydoc.info/gems/rubocop/0.49.0/RuboCop/Cop/Style/Encoding
 
-# Style/ExpandPathArguments
-
-This is for compatibility with Ruby < 2.  Without turning this cop *off*, RuboCop would "auto-correct" would break your code for Ruby 1.9. 
-
 ## What about Ruby 1.8!
 
 RuboCop has _never_ supported running on Ruby 1.8.7, but it did [used to support](https://github.com/rubocop/rubocop/issues/2640#issuecomment-378024741) analyzing it.  To that end, there is a set of RuboCop rules you can use if your project still supports Ruby 1.8.
@@ -164,6 +160,12 @@ inherit_gem:
 ```
 
 I won't copy the set of rules here, but you can peruse them [here](https://github.com/rubocop-semver/rubocop-ruby1_9/blob/main/rubocop-ruby1_8.yml).  If the rules don't fit exactly your needs, you can just copy them out to your own `.rubocop.yml` config and modify!
+
+Three different projects informed these Rubocop rules for 1.8.7.
+
+* [rubocop_187's .rubocop-yml](https://github.com/teoucsb82/rubocop_187/blob/master/.rubocop.yml) - because `rubocop_187` is a Rails app built to Ruby-1.8.7-ify code added to it.
+* [rspec's .rubocop-yml](https://github.com/rspec/rspec-core/blob/main/.rubocop.yml) - because `rspec` still supports Ruby 1.8.7
+* [rspec-pending_for's .rubocop.yml](https://github.com/pboling/rspec-pending_for/blob/master/.rubocop.yml) - because `rspec-pending_for` still supports Ruby 1.8.7
 
 If you have suggestions for a rule that improves compatibility with Ruby forward from 1.9 or 1.8, please let us know!
 
