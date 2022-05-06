@@ -97,11 +97,11 @@ Style/BracesAroundHashParameters:
   EnforcedStyle: context_dependent
 ```
 
-Everything is commented out!  None of these settings exist in the very old version of rubocop that works with Ruby 1.9.
-
 Let's talk about these settings.
 
 ## TargetRubyVersion
+
+Commented out!  Setting does not exist in the very old version of rubocop that works with Ruby 1.9.
 
 If you want to use this you'll have to upgrade to Ruby >= 2.0 and use the appropriate sibling gem, e.g. [`rubocop-ruby2_0`][2-0].
 
@@ -109,18 +109,21 @@ If you want to use this you'll have to upgrade to Ruby >= 2.0 and use the approp
 
 ## NewCops: enable
 
+Commented out!  Setting does not exist in the very old version of rubocop that works with Ruby 1.9.
+
 If you want to use this you'll have to upgrade to Ruby >= 2.4 and use the appropriate sibling gem, e.g. [`rubocop-ruby2_4`][2-4].
 
 [2-4]: https://github.com/rubocop-semver/rubocop-ruby2_4
 
 ## Style/BracesAroundHashParameters
 
-In an effort to help users of this gem prepare their code for more modern Rubies it has been enabled and configured with `coontext_dependent` as the closest parallel to what will work with Ruby 2.7+.
+In an effort to help users of this gem prepare their code for more modern Rubies it has been enabled and configured with `coontext_dependent` as the closest parallel to what will work with Ruby 2.7+, and also retain compatibility with old Ruby.
 
 See:
-
 * https://github.com/rubocop/rubocop/issues/7641
 * https://github.com/rubocop/rubocop/pull/7643
+
+NOTE: This cop was removed from Rubocop as of 0.80.0, so if you are on modern Rubocop and reading this for some reason, you can't use it.
 
 ## Development
 
