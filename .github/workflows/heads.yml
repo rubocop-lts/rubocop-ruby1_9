@@ -35,7 +35,7 @@ jobs:
           - vanilla
 #          - rails7
         ruby:
-          - jruby-head
+#          - jruby-head
           - ruby-head
 
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
             ${{ runner.os }}-gems-
       - name: Bundle install
         run: |
-          bundle config path vendor/bundle
+          bundle config set --local path vendor/bundle
           bundle install --jobs 4 --retry 3
       - name: Run RuboCop
         run: bundle exec rubocop -DES
