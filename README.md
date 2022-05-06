@@ -1,9 +1,9 @@
 <p align="center">
     <a href="https://rubocop.org#gh-light-mode-only"  target="_blank" rel="noopener">
-      <img width="120px" src="https://github.com/rubocop-semver/rubocop-ruby1_9/raw/main/docs/images/logo/rubocop-light.svg?raw=true" alt="PNG Rubocop Logo, Copyright (c) 2014 Bozhidar Batsov, MIT License, SVG Rubocop Logo, Gil Barbara, CC0">
+      <img width="120px" src="https://github.com/rubocop-semver/rubocop-ruby1_9/raw/main/docs/images/logo/rubocop-light.svg?raw=true" alt="PNG RuboCop Logo, Copyright (c) 2014 Bozhidar Batsov, MIT License, SVG RuboCop Logo, Gil Barbara, CC0">
     </a>
     <a href="https://rubocop.org#gh-dark-mode-only"  target="_blank" rel="noopener">
-      <img width="120px" src="https://github.com/rubocop-semver/rubocop-ruby1_9/raw/main/docs/images/logo/rubocop-dark.svg?raw=true" alt="SVG Rubocop Logo, Copyright (c) 2014 Bozhidar Batsov, MIT License, SVG Rubocop Logo, Roberto Huertas, MIT">
+      <img width="120px" src="https://github.com/rubocop-semver/rubocop-ruby1_9/raw/main/docs/images/logo/rubocop-dark.svg?raw=true" alt="SVG RuboCop Logo, Copyright (c) 2014 Bozhidar Batsov, MIT License, SVG RuboCop Logo, Roberto Huertas, MIT">
     </a>
     <a href="https://www.ruby-lang.org/" target="_blank" rel="noopener">
       <img width="120px" src="https://github.com/rubocop-semver/rubocop-ruby1_9/raw/main/docs/images/logo/ruby-logo.svg?raw=true" alt="Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5">
@@ -57,7 +57,7 @@ NOTE: Some gems, e.g. rspec, are intentionally supporting Ruby 1.8.7 in 2022!
 
 If you think about the use case of RSpec a bit this makes sense, as it would be ideal for the community for RSpec to be the last gem to drop support for Ruby 1.8.7.  I wrote a [suite](https://railsbling.com/tags/rspec/) of RSpec extension gems, and I try to support the same versions of Ruby as RSpec does with my extensions.
 
-This gem targets, and will run, on Ruby 1.9.  Rubocop used to be able to analyze Ruby 1.8, and this gem makes use of that. If you are still supporting Ruby 1.8, see [What about Ruby 1.8?](https://github.com/rubocop-semver/rubocop-ruby2_0#what-about-ruby-1_8) further down the page, because we can help!
+This gem targets, and will run, on Ruby 1.9.  RuboCop used to be able to analyze Ruby 1.8, and this gem makes use of that. If you are still supporting Ruby 1.8, see [What about Ruby 1.8?](https://github.com/rubocop-semver/rubocop-ruby2_0#what-about-ruby-1_8) further down the page, because we can help!
 
 ## Stable
 
@@ -98,9 +98,9 @@ This has the same effect as you declaring the following in your `.rubocop.yml`:
 
 ```yaml
 # AllCops:
-  # The sibling gems for newer versions of Ruby support the TargetRubyVersion directive as soon as Rubocop adds it.
+  # The sibling gems for newer versions of Ruby support the TargetRubyVersion directive as soon as RuboCop adds it.
   # TargetRubyVersion: 1.9
-  # The sibling gems for newer versions of Ruby support the NewCops directive as soon as Rubocop adds it.
+  # The sibling gems for newer versions of Ruby support the NewCops directive as soon as RuboCop adds it.
   # NewCops: enable
 
 Style/BracesAroundHashParameters:
@@ -141,7 +141,7 @@ See:
 * https://github.com/rubocop/rubocop/issues/7641
 * https://github.com/rubocop/rubocop/pull/7643
 
-NOTE: This cop was removed from Rubocop as of 0.80.0, so if you are on modern Rubocop and reading this for some reason, you can't use it.
+NOTE: This cop was removed from RuboCop as of 0.80.0, so if you are on modern RuboCop and reading this for some reason, you can't use it.
 
 ## Style/Encoding
 
@@ -152,7 +152,7 @@ See:
 
 # Style/ExpandPathArguments
 
-This is for compatibility with Ruby < 2.  Without turning this cop *off*, Rubocop would "auto-correct" would break your code for Ruby 1.9. 
+This is for compatibility with Ruby < 2.  Without turning this cop *off*, RuboCop would "auto-correct" would break your code for Ruby 1.9. 
 
 ## Development
 

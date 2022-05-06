@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Better documentation
 * Default cop enabled for inherited rubocop.yml: Style/Encoding
 * Default cop disabled for inherited rubocop.yml: Style/ExpandPathArguments
+* Rubocop => RuboCop typo repair
 
 ## [1.0.2] 2022-05-03
 ### Added
