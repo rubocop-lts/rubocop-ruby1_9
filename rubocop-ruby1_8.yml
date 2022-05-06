@@ -26,9 +26,6 @@ Style/Lambda:
 Style/PercentLiteralDelimiters:
   Enabled: false
 
-Style/StringLiterals:
-  Enabled: true
-
 Style/SymbolArray:
   EnforcedStyle: brackets
 
