@@ -57,7 +57,7 @@ NOTE: Some gems, e.g. rspec, are intentionally supporting Ruby 1.8.7 in 2022!
 
 If you think about the use case of RSpec a bit this makes sense, as it would be ideal for the community for RSpec to be the last gem to drop support for Ruby 1.8.7.  I wrote a [suite](https://railsbling.com/tags/rspec/) of RSpec extension gems, and I try to support the same versions of Ruby as RSpec does with my extensions.
 
-This gem targets, and will run, on Ruby 1.9.  RuboCop used to be able to analyze Ruby 1.8, and this gem makes use of that. If you are still supporting Ruby 1.8, see [What about Ruby 1.8?](https://github.com/rubocop-semver/rubocop-ruby2_0#what-about-ruby-1_8) further down the page, because we can help!
+This gem targets, and will run, on Ruby 1.9.  RuboCop used to be able to analyze Ruby 1.8, and this gem makes use of that. If you are still supporting Ruby 1.8, see [What about Ruby 1.8?](https://github.com/rubocop-semver/rubocop-ruby1_9#what-about-ruby-1_8) further down the page, because we can help!
 
 ## Stable
 
@@ -153,6 +153,19 @@ See:
 # Style/ExpandPathArguments
 
 This is for compatibility with Ruby < 2.  Without turning this cop *off*, RuboCop would "auto-correct" would break your code for Ruby 1.9. 
+
+## What about Ruby 1.8!
+
+RuboCop has _never_ supported running on Ruby 1.8.7, but it did [used to support](https://github.com/rubocop/rubocop/issues/2640#issuecomment-378024741) analyzing it.  To that end, there is a set of RuboCop rules you can use if your project still supports Ruby 1.8.
+
+```yaml
+inherit_gem:
+  rubocop-ruby1_9: rubocop-ruby1_8.yml
+```
+
+I won't copy the set of rules here, but you can peruse them [here](https://github.com/rubocop-semver/rubocop-ruby1_9/blob/main/rubocop-ruby1_8.yml).  If the rules don't fit exactly your needs, you can just copy them out to your own `.rubocop.yml` config and modify!
+
+If you have suggestions for a rule that improves compatibility with Ruby forward from 1.9 or 1.8, please let us know!
 
 ## Development
 

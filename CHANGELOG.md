@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Default cop enabled for inherited rubocop.yml: Style/Encoding
 * Default cop disabled for inherited rubocop.yml: Style/ExpandPathArguments
 * Rubocop => RuboCop typo repair
+* New rubocop-ruby1_8.yml to assist with continuing support for Ruby 1.8
 
 ## [1.0.2] 2022-05-03
 ### Added
