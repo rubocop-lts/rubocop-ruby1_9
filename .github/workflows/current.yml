@@ -33,13 +33,13 @@ jobs:
         experimental: [false]
         gemfile:
           - vanilla
-#          - rails7
+          - rails7
         rubygems:
           - latest
         bundler:
           - latest
         ruby:
-#          - "2.7"
+          - "2.7"
           - "3.0"
 
     runs-on: ubuntu-latest
