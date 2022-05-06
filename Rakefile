@@ -1,17 +1,13 @@
 # encoding: utf-8
 # frozen_string_literal: true
 
-%w(
-  bundler/gem_tasks
-  rake/testtask
-  rspec/core/rake_task
-).each { |f| require f }
+["bundler/gem_tasks", "rake/testtask", "rspec/core/rake_task"].each { |f| require f }
 
 Bundler::GemHelper.install_tasks
 
 RSpec::Core::RakeTask.new(:spec)
 desc "alias spec => test"
-task test: :spec
+task :test => :spec
 
 begin
   require "rubocop/rake_task"
@@ -22,4 +18,4 @@ rescue LoadError
   end
 end
 
-task default: [:spec, :rubocop]
+task :default => [:spec, :rubocop]
