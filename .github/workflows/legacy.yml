@@ -1,4 +1,4 @@
-name: Code Style Checks
+name: Legacy Ruby Support
 
 on:
   push:
@@ -12,15 +12,28 @@ on:
   pull_request:
     branches:
       - '*'
+  # Allow manually triggering the workflow.
+  workflow_dispatch:
+
+# Cancels all previous workflow runs for the same branch that have not yet completed.
+concurrency:
+  # The concurrency group contains the workflow name and the branch name.
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  rubocop:
-    name: RuboCop
+  test:
+    name: Ruby ${{ matrix.ruby }} ${{matrix.gemfile}} ${{ matrix.name_extra || '' }}
+    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
+      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
     strategy:
       fail-fast: false
       matrix:
         experimental: [false]
+        gemfile:
+          - ruby
+          - rails4
         rubygems:
           - "2.7.11"
         bundler:
@@ -37,6 +50,7 @@ jobs:
           - "2.7"
           - "3.0"
     runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -59,3 +73,5 @@ jobs:
           bundle install --jobs 4 --retry 3
       - name: Run RuboCop
         run: bundle exec rubocop -DES
+      - name: Run tests
+        run: bundle exec rake test
