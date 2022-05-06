@@ -1,3 +1,4 @@
+# encoding: utf-8
 # frozen_string_literal: true
 
 # NOTE: Using __FILE__ because require_relative was added in Ruby 2.1
