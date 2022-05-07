@@ -8,16 +8,6 @@ Base64 Converter: <https://codebeautify.org/svg-to-base64-converter>
 
 ---
 
-The Rubocop Logo (Simple) - rubocop-simple.svg
-
-Original PNG Source: rubocop/rubocop <https://docs.rubocop.org/rubocop/1.27/about/logo.html>
-Original PNG Author: Copyright (c) 2014 <Dimiter Petrov> <https://www.chadomoto.com/>
-Original PNG License: Creative Commons Attribution-NonCommercial 4.0 International License <http://creativecommons.org/licenses/by-nc/4.0/deed.en_GB>
-SVG Source: simple-icons/simple-icons <https://github.com/simple-icons/simple-icons/pull/7380>
-SVG Author: Isaac Caires <https://github.com/zrfisaac>
-
----
-
 The Rubocop Logo (Light) - rubocop-light.svg
 
 Original PNG Source: rubocop/rubocop <https://docs.rubocop.org/rubocop/1.27/about/logo.html>
