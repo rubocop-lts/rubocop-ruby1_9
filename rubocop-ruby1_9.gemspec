@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Semantically Versioned RuboCop Dependency"
   spec.description = "Links dependency on minimum Ruby version to maximum RuboCop version"
-  spec.homepage = "https://github.com/rubocop-semver/rubocop-ruby1_9"
+  spec.homepage = "https://github.com/rubocop-lts/rubocop-ruby1_9"
   spec.license = "MIT"
   # Installs on Ruby 3.0 and 3.1!
   # Runs on Ruby 3.0, but not 3.1
