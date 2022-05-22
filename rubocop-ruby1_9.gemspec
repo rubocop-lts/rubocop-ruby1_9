@@ -37,4 +37,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "rubocop", "0.41.2"
+
+  # Last version of parser to support Ruby 1.9
+  # If not declared here the gem can only be installed with bundler,
+  #   as rubygems can't resolve dependencies well enough on its own.
+  spec.add_dependency "parser", "2.4.0.2"
 end
