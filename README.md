@@ -80,7 +80,7 @@ official [compatibility matrix][rubocop-matrix] for `rubocop`.
 [what1_8]: https://github.com/rubocop-lts/rubocop-ruby1_9#what-about-ruby-18
 [rubocop-matrix]: https://github.com/rubocop/rubocop/blob/master/docs/modules/ROOT/pages/compatibility.adoc#support-matrix
 
-## Supporting Ruby v1... in 2022?
+## 📼 Supporting Ruby v1... in 2022?
 
 Many gems, and many of those among the most popular gems in all of Ruby-land (e.g. [rspec](https://rubygems.org/gems/rspec/versions/3.11.0), [os](https://rubygems.org/gems/os)) still do not specify a `required_ruby_version`, or they list it as `>= 0`.
 
@@ -212,7 +212,7 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-## 🌈 Contributing
+## ⚡️ Contributing
 
 See [CONTRIBUTING.md][contributing]
 
@@ -228,15 +228,36 @@ The gem is available as open source under the terms of
 the [MIT License][license] [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)][license-ref].
 See [LICENSE][license] for the official [Copyright Notice][copyright-notice-explainer].
 
+<details>
+  <summary>Project Logos (rubocop-ruby3_1)</summary>
+
+See [docs/images/logo/README.txt][project-logos]
+</details>
+
+<details>
+  <summary>Organization Logo (rubocop-semver)</summary>
+
+Author: [Yusuf Evli][org-logo-author]
+Source: [Unsplash][org-logo-source]
+License: [Unsplash License][org-logo-license]
+</details>
+
+[project-logos]: https://github.com/rubocop-lts/rubocop-ruby3_1/blob/main/docs/images/logo/README.txt
+[org-logo-author]: https://unsplash.com/@yusufevli
+[org-logo-source]: https://unsplash.com/photos/yaSLNLtKRIU
+[org-logo-license]: https://unsplash.com/license
+
+### © Copyright
+
 * Copyright (c) 2022 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
 
 [copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
 
-## 🌈 Code of Conduct
+## 🤝 Code of Conduct
 
 Everyone interacting in the Rubocop::Ruby19 project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/rubocop-lts/rubocop-ruby1_9/blob/main/CODE_OF_CONDUCT.md).
 
-## Versioning
+## 📌 Versioning
 
 This library aims to adhere to [Semantic Versioning 2.0.0][semver]. Violations of this scheme should be reported as
 bugs. Specifically, if a minor or patch version is released that breaks backward compatibility, a new version should be
