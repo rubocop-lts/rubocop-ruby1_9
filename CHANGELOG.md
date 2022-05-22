@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Rubocop => RuboCop typo repair
 * New rubocop-ruby1_8.yml to assist with continuing support for Ruby 1.8
 * Ruby Version Support Matrix
+* Support installing via rubygems, without bundler
 
 ### Fixed
 * Ability to install via `gem install` command (i.e. without bundler)
