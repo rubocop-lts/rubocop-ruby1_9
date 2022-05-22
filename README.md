@@ -164,7 +164,7 @@ If you want to use this you'll have to upgrade to Ruby >= 2.0 and use the approp
 
 ## NewCops: enable
 
-Commented out!  Setting does not exist in the very old version of rubocop that works with Ruby 1.9.
+Commented out!  Setting does not exist in very old versions of rubocop that work with Ruby < 2.4.
 
 If you want to use this you'll have to upgrade to Ruby >= 2.4 and use the appropriate sibling gem, e.g. [`rubocop-ruby2_4`][2-4].
 
