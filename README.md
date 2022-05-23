@@ -154,7 +154,7 @@ Style/ExpandPathArguments:
 
 Let's talk about these settings.
 
-## TargetRubyVersion
+### TargetRubyVersion
 
 Commented out!  Setting does not exist in the very old version of rubocop that works with Ruby 1.9.
 
@@ -162,7 +162,7 @@ If you want to use this you'll have to upgrade to Ruby >= 2.0 and use the approp
 
 [2-0]: https://github.com/rubocop-lts/rubocop-ruby2_0
 
-## NewCops: enable
+### NewCops: enable
 
 Commented out!  Setting does not exist in very old versions of rubocop that work with Ruby < 2.4.
 
@@ -170,7 +170,7 @@ If you want to use this you'll have to upgrade to Ruby >= 2.4 and use the approp
 
 [2-4]: https://github.com/rubocop-lts/rubocop-ruby2_4
 
-## Style/BracesAroundHashParameters
+### Style/BracesAroundHashParameters
 
 In an effort to help users of this gem prepare their code for more modern Rubies it has been enabled and configured with `coontext_dependent` as the closest parallel to what will work with Ruby 2.7+, and also retain compatibility with old Ruby.
 
@@ -180,7 +180,7 @@ See:
 
 NOTE: This cop was removed from RuboCop as of 0.80.0, so if you are on modern RuboCop and reading this for some reason, you can't use it.
 
-## Style/Encoding
+### Style/Encoding
 
 The encoding comments can be removed once your project drops Ruby 1.9 support (and this gem!).
 Whole file UTF-8 Encoding is default in Ruby 2+, so the Encoding comment is usually not needed there.
