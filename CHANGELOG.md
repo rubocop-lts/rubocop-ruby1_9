@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [1.0.5] 2022-05-23
+### Fixed
+- Fix typo in rubocop-ruby1_8.yml filename to be shipped
+
 ## [1.0.4] 2022-05-23
 ### Fixed
 - Ship rubocop-ruby1_8.yml with the gem
