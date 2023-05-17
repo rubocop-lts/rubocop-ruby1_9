@@ -45,27 +45,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.3] 2022-05-22
 ### Added
-* Better documentation
-* Default cop enabled for inherited rubocop.yml: Style/Encoding
-* Rubocop => RuboCop typo repair
-* New rubocop-ruby1_8.yml to assist with continuing support for Ruby 1.8
-* Ruby Version Support Matrix
-* Support installing via rubygems, without bundler
+- Better documentation
+- Default cop enabled for inherited rubocop.yml: Style/Encoding
+- Rubocop => RuboCop typo repair
+- New rubocop-ruby1_8.yml to assist with continuing support for Ruby 1.8
+- Ruby Version Support Matrix
+- Support installing via rubygems, without bundler
 
 ### Fixed
-* Ability to install via `gem install` command (i.e. without bundler)
+- Ability to install via `gem install` command (i.e. without bundler)
 
 ## [1.0.2] 2022-05-03
 ### Added
-* Style/BracesAroundHashParameters configured to help transition to Ruby 2.7+
+- Style/BracesAroundHashParameters configured to help transition to Ruby 2.7+
 
 ## [1.0.1] 2022-05-03
 ### Fixed
-* Added missing rubocop.yml for inherit_gem directive
+- Added missing rubocop.yml for inherit_gem directive
 
 ## [1.0.0] 2022-05-01
 ### Added
-* Initial release
+- Initial release
 
 [Unreleased]: https://github.com/rubocop-lts/rubocop-ruby1_9/compare/v2.0.0...HEAD
 [2.0.0]: https://github.com/rubocop-lts/rubocop-ruby1_9/compare/v1.0.5...v2.0.0
