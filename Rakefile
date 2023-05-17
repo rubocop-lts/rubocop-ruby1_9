@@ -1,19 +1,52 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
-["bundler/gem_tasks", "rake/testtask", "rspec/core/rake_task"].each { |f| require f }
+%w[
+  bundler/gem_tasks
+  rake/testtask
+  rspec/core/rake_task
+].each { |f| require f }
 
-RSpec::Core::RakeTask.new(:spec)
-desc "alias spec => test"
-task :test => :spec
+RSpec::Core::RakeTask.new(:spec) do |spec|
+  spec.pattern = FileList["spec/**/*_spec.rb"]
+end
+desc "alias test task to spec"
+task test: :spec
 
 begin
-  require "rubocop/rake_task"
-  RuboCop::RakeTask.new
+  require "yard"
+
+  YARD::Rake::YardocTask.new do |t|
+    t.files = [
+      # Splats (alphabetical)
+      "lib/**/*.rb",
+      "sig/**/*.rbs",
+      # Files (alphabetical)
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE.txt",
+      "README.md",
+      "rubocop-lts.yml",
+      "SECURITY.md"
+    ]
+    t.options = ["-m", "markdown"] # optional
+  end
 rescue LoadError
-  task :rubocop do
-    warn "RuboCop is disabled on #{RUBY_ENGINE} #{RUBY_VERSION}"
+  task :yard do
+    warn "NOTE: yard isn't installed, or is disabled for #{RUBY_VERSION} in the current environment"
   end
 end
 
-task :default => [:spec, :rubocop]
+defaults = %i[test]
+
+# Internally this works
+#   load "lib/rubocop/ruby1_9/tasks.rake"
+# But ...
+#   externally it won't, so in other internal projects' Rakefiles we:
+require "rubocop/ruby1_9"
+
+Rubocop::Ruby19.install_tasks
+
+defaults << :rubocop_gradual
+
+task default: defaults
