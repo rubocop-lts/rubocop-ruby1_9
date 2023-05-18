@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [2.0.2] 2023-05-18
+### Removed
+- stray puts debugging
+
 ## [2.0.1] 2023-05-18
 ### Fixed
 - Ship lib/rubocop/ruby1_9/rakelib/rubocop_gradual.rake
