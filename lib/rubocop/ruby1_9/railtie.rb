@@ -1,4 +1,3 @@
-puts "HELLO I AM RAILTIE in #{Rails.env}"
 module Rubocop
   module Ruby19
     class Railtie < Rails::Railtie
