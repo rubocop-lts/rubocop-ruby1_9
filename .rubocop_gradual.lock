@@ -1,8 +1,5 @@
 {
-  "bin/bundle:444457918": [
-    [66, 5, 20, "ThreadSafety/ClassInstanceVariable: Avoid class instance variables.", 2485198147]
-  ],
-  "rubocop-ruby1_9.gemspec:1216080880": [
+  "rubocop-ruby1_9.gemspec:520211136": [
     [23, 32, 8, "Gemspec/RequiredRubyVersion: `required_ruby_version` and `TargetRubyVersion` (2.0, which may be specified in .rubocop.yml) should be equal.", 484936141]
   ]
 }
