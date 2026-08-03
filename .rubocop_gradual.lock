@@ -2,8 +2,8 @@
   "rubocop-ruby1_9.gemspec:82617693": [
     [19, 32, 10, "Gemspec/RequiredRubyVersion: `required_ruby_version` and `TargetRubyVersion` (2.0, which may be specified in .rubocop.yml) should be equal.", 4072499287]
   ],
-  "spec/rubocop/ruby1_9/version_spec.rb:2597780296": [
-    [4, 1, 39, "RSpec/SpecFilePathFormat: Spec path should end with `rubocop/ruby19/version*_spec.rb`.", 4016062793],
-    [7, 3, 452, "RSpec/ExampleLength: Example has too many lines. [6/5]", 569016637]
+  "spec/rubocop/ruby1_9/version_spec.rb:3110611133": [
+    [5, 1, 39, "RSpec/SpecFilePathFormat: Spec path should end with `rubocop/ruby19/version*_spec.rb`.", 4016062793],
+    [8, 3, 452, "RSpec/ExampleLength: Example has too many lines. [6/5]", 569016637]
   ]
 }
