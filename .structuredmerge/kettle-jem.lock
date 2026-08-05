@@ -2,7 +2,7 @@
 version: 1
 template_state:
   version: 7.1.0
-  applied_at: '2026-08-04'
+  applied_at: '2026-08-05'
   changelog_replay:
     last_entry_key: kettle-jem-template-20260802-001
     last_entry_date: '2026-08-02'
@@ -965,7 +965,7 @@ files:
     recipe: template_source_application_lib_rubocop_ruby1_9_version_rb
     action: write
     dest_sha256: 06aed561b738b1eb6a1c4f931aac5ca838087ea042c0af8068753fe1dd7d3039
-    input_fingerprint: 394ebce6f2db6dc68e137ccaf053f6adee1498e5641b14c940a9cfcef15912ae
+    input_fingerprint: 3f744479513a85a2010150e693dd12adf992f98210ae0d99d31ef16ae48e6e67
     template_sources:
     - lib/gem/version.rb.example
   mise.toml:
@@ -986,7 +986,7 @@ files:
     recipe: template_source_application_rubocop_ruby1_9_gemspec
     action: write
     dest_sha256: 4a6636d36514e3a93c27ba261934a233d8c8e0af354b974c5fcbdcada4477194
-    input_fingerprint: 9d15d1a1f74c88a57734a95fc0be08489fc93b835a7a1911e2f22fb6c5db260c
+    input_fingerprint: 1a488b18971d583f0267d22d7fe56661fd8f1f129347e125fe2d9a92eccb8071
     template_sources:
     - gem.gemspec.example
   sig/rubocop/ruby1_9.rbs:
