@@ -40,40 +40,40 @@ else
   require "nomono/bundler"
 end
 
-structuredmerge_local_gems = %w[
-  tree_haver
-  ast-merge
-  ast-merge-git
-  ast-template
-  bash-merge
-  binary-merge
-  citrus-toml-merge
-  dotenv-merge
-  go-merge
-  html-merge
-  json-merge
-  kettle-jem
-  markdown-merge
-  markly-merge
-  parslet-toml-merge
-  plain-merge
-  prism-merge
-  psych-merge
-  rbs-merge
-  ruby-merge
-  rust-merge
-  smorg-rb
-  typescript-merge
-  toml-merge
-  yaml-merge
-  zip-merge
-  ast-crispr
-  ast-crispr-markdown-markly
-  ast-crispr-ruby-prism
+structuredmerge_local_gems = [
+  "tree_haver",
+  "ast-merge",
+  "ast-merge-git",
+  "ast-template",
+  "bash-merge",
+  "binary-merge",
+  "citrus-toml-merge",
+  "dotenv-merge",
+  "go-merge",
+  "html-merge",
+  "json-merge",
+  "kettle-jem",
+  "markdown-merge",
+  "markly-merge",
+  "parslet-toml-merge",
+  "plain-merge",
+  "prism-merge",
+  "psych-merge",
+  "rbs-merge",
+  "ruby-merge",
+  "rust-merge",
+  "smorg-rb",
+  "typescript-merge",
+  "toml-merge",
+  "yaml-merge",
+  "zip-merge",
+  "ast-crispr",
+  "ast-crispr-markdown-markly",
+  "ast-crispr-ruby-prism"
 ]
 
-kettle_dev_local_gems = %w[
-  kettle-dev kettle-family kettle-rb kettle-test kettle-soup-cover kettle-changelog kettle-drift
+kettle_dev_local_gems = [
+  "kettle-dev", "kettle-family", "kettle-rb", "kettle-test", "kettle-soup-cover", "kettle-changelog", "kettle-drift"
 ]
 shared_nomono_options = {
   vendored_gems_env: "VENDORED_GEMS",
@@ -90,7 +90,7 @@ structuredmerge_nomono_options = shared_nomono_options.merge(
   path_env: "STRUCTUREDMERGE_DEV",
   debug_env: "STRUCTUREDMERGE_DEBUG"
 )
-structuredmerge_local_gems_to_eval = structuredmerge_local_gems - %w[]
+structuredmerge_local_gems_to_eval = structuredmerge_local_gems - []
 
 if ENV.fetch("STRUCTUREDMERGE_DEV", "false").casecmp("false") != 0
   eval_nomono_gems(
@@ -104,7 +104,7 @@ if ENV.fetch("KETTLE_DEV_DEV", "false").casecmp("false") != 0
   # rejects duplicate declarations with different requirements or sources.
   kettle_dev_dependency = instance_variable_get(:@dependencies).to_a.find { |dependency| dependency.name == "kettle-dev" }
   kettle_dev_local_path = nomono_gems(
-    gems: %w[kettle-dev],
+    gems: ["kettle-dev"],
     **kettle_dev_nomono_options
   ).fetch("kettle-dev", nil)
   if kettle_dev_dependency && kettle_dev_local_path
@@ -113,7 +113,7 @@ if ENV.fetch("KETTLE_DEV_DEV", "false").casecmp("false") != 0
   end
 
   declared_gems = instance_variable_get(:@dependencies).to_a.map(&:name)
-  kettle_dev_local_gems_to_eval = kettle_dev_local_gems - %w[] - declared_gems
+  kettle_dev_local_gems_to_eval = kettle_dev_local_gems - [] - declared_gems
 
   eval_nomono_gems(
     gems: kettle_dev_local_gems_to_eval,
