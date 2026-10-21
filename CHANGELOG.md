@@ -22,9 +22,11 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- [kc] kettle-jem/template: updated 12 project files:
+- [kc] kettle-jem/template: updated 19 project files:
+  - code and tests (1)
   - dependencies (10)
   - other (2)
+  - workflows (6)
 
 - [kc] kettle-jem/prepare: updated 12 project files:
   - configuration (1)

@@ -21,6 +21,12 @@ template_state:
     - gemfiles/modular/templating_local.gemfile
     - rubocop-ruby1_9.gemspec
     kettle-jem/template:
+    - ".github/workflows/auto-assign.yml"
+    - ".github/workflows/dep-heads.yml"
+    - ".github/workflows/truffle.yml"
+    - ".github/workflows/truffleruby-24.2.yml"
+    - ".github/workflows/truffleruby-25.0.yml"
+    - ".github/workflows/truffleruby-33.0.yml"
     - ".licenserc.yaml"
     - ".simplecov"
     - Gemfile
@@ -33,6 +39,7 @@ template_state:
     - gemfiles/modular/templating.gemfile
     - gemfiles/modular/templating_local.gemfile
     - rubocop-ruby1_9.gemspec
+    - spec/rubocop/ruby1_9/version_spec.rb
   checksums:
     ".aiignore.example": 48a5dfdd93afd1a15fdce39cc28ca9920263f00018b0968ab031fa744521e5ce
     ".config/mise/env.sh": aeea5a2ab489ba6e5467ae8de6e386ec8c8fe4ff31a044e69d0cd6a092dd6654
